@@ -1,27 +1,48 @@
 import java.util.*;
 import java.io.*;
 
+
+//Solution 1
+// List<Integer> result=new ArrayList<>();
+// 			for(List<Long> query: queries){
+// 				List<Integer> b=new ArrayList<>();
+				
+// 				while(true){
+// 					for(int i=0;i<n;i++){
+// 						b.add(arr[i]);
+// 					}
+// 					if(b.size()>=query.get(1)){
+// 						break;
+// 					}
+					
+// 				}
+// 				int sum=0;
+// 				for(Long j=query.get(0);j<=query.get(1);j++){
+// 					long l=j;
+// 					int s=(int)l - 1;
+// 					sum+=b.get(s);
+// 				}
+					
+// 				result.add(sum);
+
+// 			}
+			
+// 			return result;
+
+// 	}
 public class Question1{
 	public static List<Integer> sumInRange(int[] arr, int n, List<List<Long>> queries, int q){
 		
+			//Solution 2
 			List<Integer> result=new ArrayList<>();
+			int mod=(int) 1e9+7;
 			for(List<Long> query: queries){
-				List<Integer> b=new ArrayList<>();
-				
-				while(true){
-					for(int i=0;i<n;i++){
-						b.add(arr[i]);
-					}
-					if(b.size()>=query.get(1)){
-						break;
-					}
 					
-				}
 				int sum=0;
 				for(Long j=query.get(0);j<=query.get(1);j++){
 					long l=j;
 					int s=(int)l - 1;
-					sum+=b.get(s);
+					sum+=arr[(s%n)]%mod;
 				}
 					
 				result.add(sum);
