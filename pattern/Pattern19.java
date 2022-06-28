@@ -2,7 +2,7 @@ package pattern;
 
 import java.util.Scanner;
 
-public class Pattern22 {
+public class Pattern19 {
     public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);
         int n=scan.nextInt();
@@ -16,15 +16,10 @@ public class Pattern22 {
                 k++;
             }
             int j=1;
-
             while(j<=i){
-                System.out.print(j);
+                System.out.print("*");
                 j++;
-            }
-            int l=1;
-            while(l<=i-1){
-                System.out.print((i-l));
-                l++;
+
             }
             System.out.println("");
             i++;

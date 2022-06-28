@@ -12,7 +12,7 @@ public class Pattern11 {
         while(i<=n){
             int j=1;
             while(j<=n){
-                System.out.print((char)('A'+i-1));
+                System.out.print(" "+(char)('A'+i-1)+" ");
                 j++;
 
             }
